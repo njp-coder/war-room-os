@@ -173,17 +173,15 @@ def github_callback(request: Request, code: str | None = None, state: str | None
 
 
 def _bind(github_id: str, login: str, name: str, email: str | None, avatar: str | None) -> str:
-    """The same person every time by GitHub id. A first sign-in claims the invite for their handle, if there is one."""
+    """The same person every time by GitHub id.
+
+    An invite is never claimed automatically: anyone can create an org and invite any handle, so a silent claim would
+    drop a stranger's first sign-in into that stranger's org, under their admin. The account is created on its own and
+    the invites addressed to that handle are offered for them to accept (see pending_invites / accept_invite)."""
     u = db.one("SELECT id FROM users WHERE github_id=?", (github_id,))
     if u:
         db.x("UPDATE users SET github=?, avatar=?, email=COALESCE(?, email) WHERE id=?", (login, avatar, email, u["id"]))
         return u["id"]
-    invite = db.one("SELECT id, name FROM users WHERE lower(github)=lower(?) AND github_id IS NULL AND org IS NOT NULL "
-                    "ORDER BY invited_by IS NULL, rowid DESC LIMIT 1", (login,))
-    if invite:
-        db.x("UPDATE users SET github_id=?, github=?, joined=?, avatar=?, email=COALESCE(?, email), name=CASE WHEN name=github THEN ? ELSE name END "
-             "WHERE id=?", (github_id, login, time.time(), avatar, email, name, invite["id"]))
-        return invite["id"]
     uid = db.uid("usr")
     db.x("INSERT INTO users(id, org, name, email, title, org_role, shift, hours_today, client_facing, github, github_id, joined, avatar) "
          "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)", (uid, None, name, email, "", None, "on", 0, 0, login, github_id, time.time(), avatar))
@@ -218,6 +216,41 @@ def _admin() -> dict:
     if not u["org"] or u["org_role"] != "admin":
         raise HTTPException(403, "Only org admins can manage people")
     return u
+
+
+def pending_invites(login: str) -> list[dict]:
+    """Invites waiting for this GitHub handle, with who sent them, so the person can judge before accepting."""
+    rows = db.q("SELECT u.id, u.org, u.org_role, o.name AS org_name, inv.name AS invited_by, inv.github AS invited_by_github "
+                "FROM users u JOIN orgs o ON o.id=u.org LEFT JOIN users inv ON inv.id=u.invited_by "
+                "WHERE lower(u.github)=lower(?) AND u.github_id IS NULL AND u.org IS NOT NULL", (login,))
+    for r in rows:
+        r["members"] = db.one("SELECT count(*) n FROM users WHERE org=? AND joined IS NOT NULL", (r["org"],))["n"]
+    return rows
+
+
+@router.get("/org/invites/pending")
+def my_invites():
+    u = _me()
+    return {"invites": [] if u["org"] else pending_invites(u["github"] or "")}
+
+
+class AcceptIn(BaseModel):
+    invite: str
+
+
+@router.post("/org/invites/accept")
+def accept_invite(body: AcceptIn):
+    """Take over the placeholder the org made for this handle: its project memberships come with it."""
+    u = _me()
+    if u["org"]:
+        raise HTTPException(409, "You already belong to an org")
+    invite = next((i for i in pending_invites(u["github"] or "") if i["id"] == body.invite), None)
+    if not invite:
+        raise HTTPException(404, "That invite is no longer open")
+    db.x("UPDATE members SET user=? WHERE user=?", (u["id"], invite["id"]))
+    db.x("UPDATE users SET org=?, org_role=? WHERE id=?", (invite["org"], invite["org_role"] or "member", u["id"]))
+    db.x("DELETE FROM users WHERE id=?", (invite["id"],))
+    return {"org": invite["org"]}
 
 
 class OrgIn(BaseModel):

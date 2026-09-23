@@ -43,6 +43,17 @@ def _no_secret(msg: str) -> str:
     return msg.split("\n")[0]
 
 
+def _owner_row(owner_type: str, owner_id: str) -> dict:
+    """A bug, test or incident by id. The table comes from a fixed map, never from the request."""
+    table = {"bug": "bugs", "test": "tests", "incident": "incidents"}.get(owner_type)
+    if not table:
+        raise HTTPException(404)
+    row = db.one(f"SELECT * FROM {table} WHERE id=?", (owner_id,))
+    if not row:
+        raise HTTPException(404)
+    return row
+
+
 def rel_or_404(rid: str) -> dict:
     r = db.one("SELECT * FROM releases WHERE id=?", (rid,))
     if not r:
@@ -168,6 +179,12 @@ def settings(pid: str, body: SettingsIn, x_user: str | None = Header(None)):
     if body.explorer_writes is not None:
         s["explorer_writes"] = body.explorer_writes
         db.event(pid, None, u["id"], "explorer_writes", {"note": "on" if body.explorer_writes else "off"})
+    if body.staging_url:
+        from . import netguard
+        try:
+            body.staging_url = netguard.safe_http(body.staging_url, "staging URL")
+        except netguard.Blocked as e:
+            raise HTTPException(400, str(e))
     db.x("UPDATE projects SET settings=?, staging_url=COALESCE(?, staging_url) WHERE id=?", (json.dumps(s), body.staging_url, pid))
     return {"ok": True}
 
@@ -744,13 +761,13 @@ async def upload_evidence(owner_type: str, owner_id: str, file: UploadFile = Fil
 
 
 @router.get("/files/{aid}")
-def get_file(aid: str, u: str = ""):
+def get_file(aid: str, x_user: str | None = Header(None)):
+    """The caller is the session, never a user id in the query string."""
+    user = me(x_user)
     a = db.one("SELECT * FROM attachments WHERE id=?", (aid,))
     if not a or not a["path"]:
         raise HTTPException(404)
-    user = db.one("SELECT * FROM users WHERE id=?", (u,))
-    if not user or not db.role_of(user["id"], a["project"]):
-        raise HTTPException(403)
+    need(user, a["project"], READ_ALL)
     return FileResponse(a["path"], filename=a["name"])
 
 
@@ -761,7 +778,9 @@ class NoteIn(BaseModel):
 @router.get("/thread/{owner_type}/{owner_id}")
 def thread(owner_type: str, owner_id: str, x_user: str | None = Header(None)):
     from . import testing
-    me(x_user)
+    u = me(x_user)
+    row = _owner_row(owner_type, owner_id)
+    need(u, row["project"], READ_ALL)
     return {"thread": testing.notes(owner_type, owner_id), "evidence": testing.attachments(owner_type, owner_id)}
 
 
@@ -769,8 +788,7 @@ def thread(owner_type: str, owner_id: str, x_user: str | None = Header(None)):
 def post_note(owner_type: str, owner_id: str, body: NoteIn, x_user: str | None = Header(None)):
     from . import testing
     u = me(x_user)
-    table = {"bug": "bugs", "test": "tests", "incident": "incidents"}.get(owner_type)
-    row = db.one(f"SELECT project FROM {table} WHERE id=?", (owner_id,))
+    row = _owner_row(owner_type, owner_id)
     need(u, row["project"], TEST | {"support"})
     testing.note(row["project"], owner_type, owner_id, u["name"], "human", body.text)
     _learn_from_reply(row["project"], owner_type, owner_id, u, body.text)

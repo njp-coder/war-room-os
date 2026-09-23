@@ -25,6 +25,8 @@ from urllib.parse import parse_qs, unquote, urlparse
 import sqlglot
 from sqlalchemy import create_engine, event, inspect, text
 
+from . import netguard
+
 MAX_ROWS = 200
 TIMEOUT_MS = 5000
 SCAN_ITEMS = 5000          # DynamoDB: most items a count may read
@@ -46,6 +48,7 @@ KINDS = {
 
 
 def for_url(url: str):
+    netguard.safe_db_url(url)  # never the server's own disk or private network: see netguard.py
     scheme = url.split("://", 1)[0].lower()
     if scheme.startswith("mongodb"):
         return MongoAdapter(url)

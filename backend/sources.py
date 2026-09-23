@@ -17,7 +17,7 @@ from pathlib import Path
 
 import httpx
 
-from . import db, graph, staging
+from . import db, graph, netguard, staging
 
 db.x("""CREATE TABLE IF NOT EXISTS sources(id TEXT PRIMARY KEY, project TEXT, kind TEXT, name TEXT, config TEXT, enabled INT DEFAULT 1,
         status TEXT, last_polled REAL, cursor TEXT)""")
@@ -93,7 +93,7 @@ def listing(project: str) -> list[dict]:
 # ---------------- fetchers: each returns [{message, level, frames, link}] for new events ----------------
 
 def _fetch_logfile(src: dict, cfg: dict, secret: str | None) -> tuple[list[dict], str]:
-    path = Path(cfg["path"]).expanduser()
+    path = netguard.safe_path(cfg["path"])
     files = sorted(path.glob("*.log")) if path.is_dir() else [path]
     cursor = json.loads(src["cursor"] or "{}")
     events = []
@@ -133,7 +133,7 @@ def _fetch_logfile(src: dict, cfg: dict, secret: str | None) -> tuple[list[dict]
 
 
 def _fetch_sentry(src: dict, cfg: dict, secret: str | None) -> tuple[list[dict], str]:
-    base = (cfg.get("base_url") or "https://sentry.io").rstrip("/")
+    base = netguard.safe_http(cfg.get("base_url") or "https://sentry.io", "Sentry URL").rstrip("/")
     r = httpx.get(f"{base}/api/0/projects/{cfg['org']}/{cfg['project']}/issues/", params={"statsPeriod": "24h", "query": "is:unresolved"},
                   headers={"Authorization": f"Bearer {secret}"}, timeout=20)
     r.raise_for_status()
@@ -154,7 +154,10 @@ def _fetch_sentry(src: dict, cfg: dict, secret: str | None) -> tuple[list[dict],
 
 def _fetch_datadog(src: dict, cfg: dict, secret: str | None) -> tuple[list[dict], str]:
     api, app = (secret or ":").split(":", 1)
-    site = cfg.get("site") or "datadoghq.com"
+    site = (cfg.get("site") or "datadoghq.com").strip().lower()
+    if not re.fullmatch(r"[a-z0-9.-]+", site):  # built into a hostname below: no credentials or paths smuggled in
+        raise ValueError("That isn't a Datadog site, e.g. datadoghq.com or datadoghq.eu")
+    netguard.check_host(f"api.{site}")
     since = json.loads(src["cursor"] or "{}").get("to") or "now-5m"
     body = {"filter": {"query": cfg.get("query") or "status:error", "from": since, "to": "now"}, "page": {"limit": 1000}, "sort": "timestamp"}
     r = httpx.post(f"https://api.{site}/api/v2/logs/events/search", json=body, timeout=20,
@@ -174,7 +177,7 @@ def _fetch_datadog(src: dict, cfg: dict, secret: str | None) -> tuple[list[dict]
 def _fetch_loki(src: dict, cfg: dict, secret: str | None) -> tuple[list[dict], str]:
     start = json.loads(src["cursor"] or "{}").get("ns") or str(int((time.time() - 300) * 1e9))
     headers = {"Authorization": f"Bearer {secret}"} if secret else {}
-    r = httpx.get(cfg["url"].rstrip("/") + "/loki/api/v1/query_range", headers=headers, timeout=20,
+    r = httpx.get(netguard.safe_http(cfg["url"], "Loki URL").rstrip("/") + "/loki/api/v1/query_range", headers=headers, timeout=20,
                   params={"query": cfg.get("query") or '{job=~".+"} |~ "(?i)error|exception"', "start": start, "limit": 1000, "direction": "forward"})
     r.raise_for_status()
     out, last = [], int(start)

@@ -234,8 +234,10 @@ def status(project: str, track: str) -> dict:
 def client_update(project: str, track: str, incident_id: str) -> str:
     """A plain message this team can send customers or a client about a live problem. No internals, no blame, no guesses."""
     from . import gateway
-    i = db.one("SELECT * FROM incidents WHERE id=?", (incident_id,))
+    i = db.one("SELECT * FROM incidents WHERE id=? AND project=?", (incident_id, project))  # never another project's incident
     t = db.one("SELECT name FROM tracks WHERE id=?", (track,))
+    if not i or not t:
+        raise LookupError("No such incident in this project")
     words = summary(project, track, 600)
     fallback = (f"We're aware of a problem affecting part of the service and our team is working on it. "
                 f"We'll update you as soon as it's resolved.")

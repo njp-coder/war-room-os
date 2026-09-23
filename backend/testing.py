@@ -19,7 +19,7 @@ from pathlib import Path
 
 import httpx
 
-from . import db, graph
+from . import netguard, db, graph
 from .paths import DATA
 
 UPLOADS = DATA / "uploads"
@@ -201,7 +201,7 @@ def run_agent(release: dict) -> dict:
             else:
                 label = (graph.node(project, target) or {"label": target.split(':', 1)[1]})["label"].split("@")[0]
                 _, _, path = label.partition(" ")
-                r = httpx.get(proj["staging_url"].rstrip("/") + path, timeout=10)
+                r = httpx.get(netguard.safe_http(proj["staging_url"], "staging URL").rstrip("/") + path, timeout=10)
                 failed = r.status_code >= 500
                 summary = f"GET {path} -> {r.status_code}"
                 title = f"GET {path} returns {r.status_code} on staging"
