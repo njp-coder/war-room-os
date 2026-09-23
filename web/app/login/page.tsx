@@ -7,7 +7,7 @@ import { setCurrentUser } from "@/lib/api";
 import { Initials } from "@/components/ui";
 
 type U = { id: string; name: string; title: string; org_role: string };
-type Cfg = { github: boolean; demo: boolean };
+type Cfg = { github: boolean; demo: boolean; gated: boolean };
 
 export default function Login() {
   const router = useRouter();
@@ -15,11 +15,13 @@ export default function Login() {
   const [users, setUsers] = useState<U[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [next, setNext] = useState("/");
+  const [code, setCode] = useState("");
 
   useEffect(() => {
     const qs = new URLSearchParams(location.search);
     setError(qs.get("error"));
     setNext(qs.get("next") ?? "/");
+    setCode(qs.get("code") ?? "");
     fetch("/api/auth/config").then((r) => r.json()).then((c: Cfg) => {
       setCfg(c);
       if (c.demo) fetch("/api/users").then((r) => r.json()).then(setUsers).catch(() => undefined);
@@ -49,8 +51,14 @@ export default function Login() {
       {error && <p role="alert" className="rounded-lg border border-[#4a2a2a] bg-[#1c1414] px-3 py-2 text-sm text-bad">{error}</p>}
       {!cfg && !error && <div className="h-11 animate-pulse rounded-lg bg-panel" />}
 
+      {cfg?.gated && !code && (
+        <p className="rounded-lg border border-line px-3.5 py-2.5 text-[13px] leading-relaxed text-text-2">
+          War Room is invite-only right now. Sign in if your GitHub account was added, or use the invite link you were sent.
+        </p>
+      )}
+
       {cfg?.github && (
-        <a href={`/api/auth/github/start?next=${encodeURIComponent(next)}`}
+        <a href={`/api/auth/github/start?next=${encodeURIComponent(next)}${code ? `&code=${encodeURIComponent(code)}` : ""}`}
           className="inline-flex h-11 items-center justify-center gap-2.5 rounded-lg bg-text px-4 text-sm font-semibold text-bg transition hover:brightness-95 active:scale-[0.99]">
           <GithubLogo size={18} weight="fill" /> Continue with GitHub
         </a>

@@ -4,6 +4,10 @@ Every /api route needs a session except the few in PUBLIC. The session is an opa
 cookie; only its SHA-256 is stored. Demo mode (WARROOM_DEMO_MODE=1) brings back the persona picker so a demo can
 show the same screen as a junior and a senior; it is off unless set, and the web shows a banner while it is on.
 
+Who may sign in: open unless WARROOM_ALLOWED_GITHUB (comma-separated handles) or WARROOM_JOIN_CODE is set. With
+either set, a person gets in by being listed, by already having an account or an org's invite, or by arriving on a
+link carrying the join code (/login?code=...). Judges get the link; the team gets listed.
+
 Env: GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET (a GitHub OAuth App), WARROOM_PUBLIC_URL (the web origin, used for the
 OAuth callback and the Secure flag; derived from the request when unset), WARROOM_DEMO_MODE.
 """
@@ -35,11 +39,42 @@ _session_user: contextvars.ContextVar[str | None] = contextvars.ContextVar("sess
 
 db.x("CREATE TABLE IF NOT EXISTS sessions(id TEXT PRIMARY KEY, user TEXT, created REAL, expires REAL, last_seen REAL, agent TEXT)")
 db.x("CREATE TABLE IF NOT EXISTS oauth_states(state TEXT PRIMARY KEY, next TEXT, created REAL)")
+try:
+    db.x("ALTER TABLE oauth_states ADD COLUMN code TEXT")  # the join code they arrived with, checked at callback
+except Exception:
+    pass
 for col in ("github_id TEXT", "joined REAL", "avatar TEXT", "invited_by TEXT"):
     try:
         db.x(f"ALTER TABLE users ADD COLUMN {col}")
     except Exception:
         pass  # already there
+
+
+def allowed_handles() -> set[str]:
+    return {h.strip().lstrip("@").lower() for h in os.environ.get("WARROOM_ALLOWED_GITHUB", "").split(",") if h.strip()}
+
+
+def join_code() -> str:
+    return os.environ.get("WARROOM_JOIN_CODE", "").strip()
+
+
+def gated() -> bool:
+    """Open to anyone unless the deployment names who may sign in. Local development stays open."""
+    return bool(allowed_handles() or join_code())
+
+
+def may_sign_in(login: str, code: str | None) -> bool:
+    """A GitHub handle gets in if the deployment lists it, an org already invited it, it already has an account,
+    or the person arrived with the current join code."""
+    if not gated():
+        return True
+    login = (login or "").lower()
+    if login in allowed_handles():
+        return True
+    if code and join_code() and secrets.compare_digest(code.strip(), join_code()):
+        return True
+    known = db.one("SELECT 1 FROM users WHERE lower(github)=lower(?) AND (org IS NOT NULL OR github_id IS NOT NULL)", (login,))
+    return bool(known)
 
 
 def demo_mode() -> bool:
@@ -110,16 +145,16 @@ async def middleware(request: Request, call_next):
 
 @router.get("/auth/config")
 def config():
-    return {"github": github_ready(), "demo": demo_mode()}
+    return {"github": github_ready(), "demo": demo_mode(), "gated": gated()}
 
 
 @router.get("/auth/github/start")
-def github_start(request: Request, next: str | None = None):
+def github_start(request: Request, next: str | None = None, code: str | None = None):
     if not github_ready():
         raise HTTPException(503, "GitHub sign-in isn't set up. Add GITHUB_CLIENT_ID and GITHUB_CLIENT_SECRET to .env.")
     state = secrets.token_urlsafe(24)
     db.x("DELETE FROM oauth_states WHERE created < ?", (time.time() - STATE_TTL,))
-    db.x("INSERT INTO oauth_states VALUES(?,?,?)", (state, _safe_next(next), time.time()))
+    db.x("INSERT INTO oauth_states(state, next, created, code) VALUES(?,?,?,?)", (state, _safe_next(next), time.time(), (code or "").strip()[:80]))
     # A GitHub App gets its permissions from the install, not from scopes; an OAuth App still needs them.
     from . import ghapp
     q = {"client_id": os.environ["GITHUB_CLIENT_ID"], "redirect_uri": f"{_public_url(request)}/api/auth/github/callback",
@@ -156,6 +191,9 @@ def github_callback(request: Request, code: str | None = None, state: str | None
         return _fail(request, "Couldn't reach GitHub. Try again.")
     if not gh.get("id") or not gh.get("login"):
         return _fail(request, "GitHub didn't return an account.")
+    if not may_sign_in(gh["login"], st["code"] if "code" in st.keys() else None):
+        return _fail(request, f"War Room is invite-only right now. Ask the admin to add @{gh['login']}, "
+                              f"or open the invite link you were sent.")
     uid = _bind(str(gh["id"]), gh["login"], gh.get("name") or gh["login"], email or gh.get("email"), gh.get("avatar_url"))
     # Kept encrypted, and used for one thing: asking GitHub which App installs this person can see, so nobody can
     # connect a repo their own account can't reach. Replaced on every sign-in, deleted on sign-out of the last session.
