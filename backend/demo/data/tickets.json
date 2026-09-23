@@ -1,0 +1,2402 @@
+[
+{
+"id": "t0019",
+"text": "password reset says email is invalid this is urgent",
+"user_id": "u10712",
+"minute": 102,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0046",
+"text": "sign in broken after your update, email rejected on the app",
+"user_id": "u14738",
+"minute": 102,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0079",
+"text": "password reset says email is invalid since yesterday",
+"user_id": "u12227",
+"minute": 102,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0016",
+"text": "locked out of my account, invalid email address asap",
+"user_id": "u11188",
+"minute": 103,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0072",
+"text": "password reset says email is invalid on the app",
+"user_id": "u14802",
+"minute": 103,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0041",
+"text": "locked out of my account, invalid email address this is urgent",
+"user_id": "u12438",
+"minute": 104,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0034",
+"text": "sign in broken after your update, email rejected this is urgent",
+"user_id": "u14945",
+"minute": 105,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0058",
+"text": "password reset says email is invalid this is urgent",
+"user_id": "u12878",
+"minute": 105,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0074",
+"text": "password reset says email is invalid this is urgent",
+"user_id": "u14054",
+"minute": 106,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0086",
+"text": "locked out of my account, invalid email address",
+"user_id": "u12918",
+"minute": 106,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0056",
+"text": "email not valid when I sign in, but I've used this account for years on the app",
+"user_id": "u14314",
+"minute": 108,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0061",
+"text": "login fails with invalid email error since yesterday",
+"user_id": "u10317",
+"minute": 108,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0155",
+"text": "accented letters in my name are broken third time reporting",
+"user_id": "u14216",
+"minute": 108,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0159",
+"text": "profile name is garbled on the app",
+"user_id": "u13208",
+"minute": 108,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0002",
+"text": "password reset says email is invalid",
+"user_id": "u12161",
+"minute": 109,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0027",
+"text": "login nahi ho raha, invalid email bol raha hai on the app",
+"user_id": "u12526",
+"minute": 109,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0165",
+"text": "my name looks like \u00c3\u00a1\u00c3\u00b1 now third time reporting",
+"user_id": "u11222",
+"minute": 110,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0184",
+"text": "my name shows weird characters like \u00c3\u00a9 this is urgent",
+"user_id": "u10706",
+"minute": 110,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0188",
+"text": "my name looks like \u00c3\u00a1\u00c3\u00b1 now since yesterday",
+"user_id": "u11900",
+"minute": 110,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0000",
+"text": "email not valid when I sign in, but I've used this account for years please help",
+"user_id": "u11667",
+"minute": 111,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0028",
+"text": "login nahi ho raha, invalid email bol raha hai since yesterday",
+"user_id": "u13955",
+"minute": 111,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0073",
+"text": "locked out of my account, invalid email address",
+"user_id": "u12533",
+"minute": 111,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0170",
+"text": "my name shows weird characters like \u00c3\u00a9 on the app",
+"user_id": "u14785",
+"minute": 111,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0007",
+"text": "login fails with invalid email error since yesterday",
+"user_id": "u10755",
+"minute": 112,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0049",
+"text": "sign in broken after your update, email rejected asap",
+"user_id": "u13376",
+"minute": 112,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0063",
+"text": "password reset says email is invalid on the app",
+"user_id": "u14810",
+"minute": 112,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0069",
+"text": "sign in broken after your update, email rejected asap",
+"user_id": "u13252",
+"minute": 112,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0081",
+"text": "sign in broken after your update, email rejected",
+"user_id": "u11764",
+"minute": 112,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0179",
+"text": "name displays garbage symbols after the update since yesterday",
+"user_id": "u13844",
+"minute": 112,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0022",
+"text": "email not valid when I sign in, but I've used this account for years third time reporting",
+"user_id": "u14066",
+"minute": 113,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0037",
+"text": "login fails with invalid email error",
+"user_id": "u12904",
+"minute": 113,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0071",
+"text": "can't log in, it says my email is invalid on the app",
+"user_id": "u10874",
+"minute": 113,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0176",
+"text": "my name looks like \u00c3\u00a1\u00c3\u00b1 now asap",
+"user_id": "u13892",
+"minute": 113,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0186",
+"text": "accented letters in my name are broken",
+"user_id": "u12522",
+"minute": 113,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0006",
+"text": "login fails with invalid email error asap",
+"user_id": "u10288",
+"minute": 114,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0008",
+"text": "sign in broken after your update, email rejected please help",
+"user_id": "u11208",
+"minute": 114,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0043",
+"text": "login nahi ho raha, invalid email bol raha hai",
+"user_id": "u11788",
+"minute": 114,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0060",
+"text": "locked out of my account, invalid email address this is urgent",
+"user_id": "u11212",
+"minute": 114,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0090",
+"text": "email not valid when I sign in, but I've used this account for years this is urgent",
+"user_id": "u11220",
+"minute": 114,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0182",
+"text": "name displays garbage symbols after the update",
+"user_id": "u10259",
+"minute": 114,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0193",
+"text": "profile name is garbled on the app",
+"user_id": "u11272",
+"minute": 114,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0197",
+"text": "my name shows weird characters like \u00c3\u00a9 on the app",
+"user_id": "u10853",
+"minute": 114,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0195",
+"text": "accented letters in my name are broken",
+"user_id": "u12957",
+"minute": 115,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0200",
+"text": "my name shows weird characters like \u00c3\u00a9 asap",
+"user_id": "u14926",
+"minute": 115,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0015",
+"text": "login nahi ho raha, invalid email bol raha hai since yesterday",
+"user_id": "u11150",
+"minute": 116,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0044",
+"text": "login nahi ho raha, invalid email bol raha hai please help",
+"user_id": "u12051",
+"minute": 116,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0168",
+"text": "name displays garbage symbols after the update",
+"user_id": "u14077",
+"minute": 116,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0040",
+"text": "password reset says email is invalid asap",
+"user_id": "u12027",
+"minute": 117,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0078",
+"text": "login nahi ho raha, invalid email bol raha hai on the app",
+"user_id": "u13195",
+"minute": 117,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0004",
+"text": "locked out of my account, invalid email address",
+"user_id": "u13080",
+"minute": 118,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0036",
+"text": "login fails with invalid email error third time reporting",
+"user_id": "u10673",
+"minute": 118,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0175",
+"text": "my name looks like \u00c3\u00a1\u00c3\u00b1 now third time reporting",
+"user_id": "u10264",
+"minute": 118,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0035",
+"text": "login nahi ho raha, invalid email bol raha hai this is urgent",
+"user_id": "u13955",
+"minute": 119,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0054",
+"text": "email not valid when I sign in, but I've used this account for years this is urgent",
+"user_id": "u12778",
+"minute": 119,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0166",
+"text": "profile name is garbled",
+"user_id": "u12573",
+"minute": 119,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0030",
+"text": "email not valid when I sign in, but I've used this account for years asap",
+"user_id": "u13275",
+"minute": 120,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0045",
+"text": "password reset says email is invalid please help",
+"user_id": "u13280",
+"minute": 120,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0067",
+"text": "locked out of my account, invalid email address third time reporting",
+"user_id": "u11788",
+"minute": 120,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0199",
+"text": "accented letters in my name are broken please help",
+"user_id": "u14077",
+"minute": 120,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0048",
+"text": "sign in broken after your update, email rejected asap",
+"user_id": "u12404",
+"minute": 125,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0014",
+"text": "locked out of my account, invalid email address since yesterday",
+"user_id": "u13422",
+"minute": 126,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0065",
+"text": "can't log in, it says my email is invalid please help",
+"user_id": "u11370",
+"minute": 126,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0157",
+"text": "profile name is garbled on the app",
+"user_id": "u11059",
+"minute": 126,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0025",
+"text": "password reset says email is invalid asap",
+"user_id": "u13651",
+"minute": 127,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0181",
+"text": "profile name is garbled third time reporting",
+"user_id": "u10557",
+"minute": 127,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0001",
+"text": "sign in broken after your update, email rejected please help",
+"user_id": "u14525",
+"minute": 128,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0088",
+"text": "sign in broken after your update, email rejected please help",
+"user_id": "u14149",
+"minute": 128,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0089",
+"text": "can't log in, it says my email is invalid this is urgent",
+"user_id": "u13680",
+"minute": 128,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0092",
+"text": "login fails with invalid email error since yesterday",
+"user_id": "u13433",
+"minute": 128,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0169",
+"text": "my name looks like \u00c3\u00a1\u00c3\u00b1 now third time reporting",
+"user_id": "u12137",
+"minute": 128,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0012",
+"text": "locked out of my account, invalid email address since yesterday",
+"user_id": "u12750",
+"minute": 129,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0047",
+"text": "sign in broken after your update, email rejected third time reporting",
+"user_id": "u10063",
+"minute": 129,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0032",
+"text": "password reset says email is invalid this is urgent",
+"user_id": "u11930",
+"minute": 130,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0039",
+"text": "login nahi ho raha, invalid email bol raha hai",
+"user_id": "u11603",
+"minute": 130,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0174",
+"text": "profile name is garbled please help",
+"user_id": "u11987",
+"minute": 130,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0187",
+"text": "accented letters in my name are broken asap",
+"user_id": "u10549",
+"minute": 130,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0017",
+"text": "login nahi ho raha, invalid email bol raha hai",
+"user_id": "u11603",
+"minute": 131,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0021",
+"text": "locked out of my account, invalid email address please help",
+"user_id": "u14293",
+"minute": 131,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0082",
+"text": "password reset says email is invalid please help",
+"user_id": "u11208",
+"minute": 131,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0180",
+"text": "my name shows weird characters like \u00c3\u00a9",
+"user_id": "u13606",
+"minute": 131,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0185",
+"text": "name displays garbage symbols after the update on the app",
+"user_id": "u14796",
+"minute": 131,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0005",
+"text": "locked out of my account, invalid email address on the app",
+"user_id": "u14131",
+"minute": 132,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0053",
+"text": "locked out of my account, invalid email address since yesterday",
+"user_id": "u10018",
+"minute": 133,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0042",
+"text": "locked out of my account, invalid email address please help",
+"user_id": "u10178",
+"minute": 134,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0167",
+"text": "my name shows weird characters like \u00c3\u00a9 asap",
+"user_id": "u13884",
+"minute": 134,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0059",
+"text": "locked out of my account, invalid email address since yesterday",
+"user_id": "u14008",
+"minute": 135,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0083",
+"text": "locked out of my account, invalid email address",
+"user_id": "u10205",
+"minute": 135,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0050",
+"text": "email not valid when I sign in, but I've used this account for years third time reporting",
+"user_id": "u12715",
+"minute": 137,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0178",
+"text": "accented letters in my name are broken asap",
+"user_id": "u12887",
+"minute": 138,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0202",
+"text": "accented letters in my name are broken asap",
+"user_id": "u14070",
+"minute": 138,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0076",
+"text": "login nahi ho raha, invalid email bol raha hai this is urgent",
+"user_id": "u11881",
+"minute": 139,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0189",
+"text": "my name shows weird characters like \u00c3\u00a9 third time reporting",
+"user_id": "u10549",
+"minute": 139,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0190",
+"text": "name displays garbage symbols after the update since yesterday",
+"user_id": "u12259",
+"minute": 141,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0161",
+"text": "accented letters in my name are broken please help",
+"user_id": "u11400",
+"minute": 143,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0177",
+"text": "profile name is garbled third time reporting",
+"user_id": "u10843",
+"minute": 143,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0201",
+"text": "name displays garbage symbols after the update asap",
+"user_id": "u12710",
+"minute": 143,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0009",
+"text": "sign in broken after your update, email rejected",
+"user_id": "u14152",
+"minute": 145,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0010",
+"text": "email not valid when I sign in, but I've used this account for years since yesterday",
+"user_id": "u12734",
+"minute": 145,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0055",
+"text": "login fails with invalid email error asap",
+"user_id": "u13545",
+"minute": 146,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0075",
+"text": "login nahi ho raha, invalid email bol raha hai asap",
+"user_id": "u11282",
+"minute": 149,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0023",
+"text": "email not valid when I sign in, but I've used this account for years asap",
+"user_id": "u14622",
+"minute": 150,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0085",
+"text": "password reset says email is invalid on the app",
+"user_id": "u11269",
+"minute": 150,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0095",
+"text": "billed twice, please refund asap",
+"user_id": "u11105",
+"minute": 150,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0151",
+"text": "double charge on my card for the subscription please help",
+"user_id": "u13837",
+"minute": 150,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0127",
+"text": "do baar paise kat gaye subscription ke asap",
+"user_id": "u11634",
+"minute": 151,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0026",
+"text": "email not valid when I sign in, but I've used this account for years on the app",
+"user_id": "u13746",
+"minute": 152,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0057",
+"text": "email not valid when I sign in, but I've used this account for years third time reporting",
+"user_id": "u13792",
+"minute": 152,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0091",
+"text": "sign in broken after your update, email rejected this is urgent",
+"user_id": "u10215",
+"minute": 152,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0132",
+"text": "our company card got charged twice for all seats on the app",
+"user_id": "u12802",
+"minute": 152,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0141",
+"text": "our company card got charged twice for all seats on the app",
+"user_id": "u14039",
+"minute": 152,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0143",
+"text": "our company card got charged twice for all seats on the app",
+"user_id": "u13457",
+"minute": 152,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0051",
+"text": "password reset says email is invalid this is urgent",
+"user_id": "u14715",
+"minute": 153,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0113",
+"text": "I was charged twice this month third time reporting",
+"user_id": "u12953",
+"minute": 153,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0018",
+"text": "email not valid when I sign in, but I've used this account for years since yesterday",
+"user_id": "u13792",
+"minute": 154,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0147",
+"text": "double charge on my card for the subscription please help",
+"user_id": "u10573",
+"minute": 154,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0163",
+"text": "my name looks like \u00c3\u00a1\u00c3\u00b1 now third time reporting",
+"user_id": "u12850",
+"minute": 154,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0031",
+"text": "email not valid when I sign in, but I've used this account for years please help",
+"user_id": "u14200",
+"minute": 155,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0080",
+"text": "login fails with invalid email error please help",
+"user_id": "u12311",
+"minute": 155,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0104",
+"text": "our company card got charged twice for all seats this is urgent",
+"user_id": "u10448",
+"minute": 155,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0110",
+"text": "double charge on my card for the subscription this is urgent",
+"user_id": "u11363",
+"minute": 155,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0068",
+"text": "login fails with invalid email error",
+"user_id": "u14807",
+"minute": 156,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0087",
+"text": "password reset says email is invalid asap",
+"user_id": "u10315",
+"minute": 156,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0062",
+"text": "email not valid when I sign in, but I've used this account for years on the app",
+"user_id": "u11430",
+"minute": 157,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0114",
+"text": "billed twice, please refund this is urgent",
+"user_id": "u10773",
+"minute": 157,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0134",
+"text": "double charge on my card for the subscription please help",
+"user_id": "u14304",
+"minute": 157,
+"_bug": "charge",
+"client": "Kestrel Fitness"
+},
+{
+"id": "t0160",
+"text": "accented letters in my name are broken",
+"user_id": "u12733",
+"minute": 157,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0191",
+"text": "name displays garbage symbols after the update this is urgent",
+"user_id": "u13635",
+"minute": 157,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0192",
+"text": "name displays garbage symbols after the update asap",
+"user_id": "u11670",
+"minute": 157,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0070",
+"text": "locked out of my account, invalid email address this is urgent",
+"user_id": "u12621",
+"minute": 158,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0119",
+"text": "two payments taken for the same plan on the app",
+"user_id": "u12021",
+"minute": 158,
+"_bug": "charge",
+"client": "Kestrel Fitness"
+},
+{
+"id": "t0123",
+"text": "our company card got charged twice for all seats since yesterday",
+"user_id": "u12823",
+"minute": 158,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0139",
+"text": "double charge on my card for the subscription asap",
+"user_id": "u13013",
+"minute": 158,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0096",
+"text": "do baar paise kat gaye subscription ke since yesterday",
+"user_id": "u10057",
+"minute": 160,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0173",
+"text": "name displays garbage symbols after the update",
+"user_id": "u11171",
+"minute": 160,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0138",
+"text": "do baar paise kat gaye subscription ke since yesterday",
+"user_id": "u14381",
+"minute": 161,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0117",
+"text": "I was charged twice this month asap",
+"user_id": "u13506",
+"minute": 162,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0118",
+"text": "our company card got charged twice for all seats this is urgent",
+"user_id": "u12519",
+"minute": 162,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0130",
+"text": "I was charged twice this month asap",
+"user_id": "u12849",
+"minute": 162,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0172",
+"text": "name displays garbage symbols after the update asap",
+"user_id": "u10288",
+"minute": 163,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0129",
+"text": "double charge on my card for the subscription since yesterday",
+"user_id": "u14559",
+"minute": 164,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0084",
+"text": "locked out of my account, invalid email address asap",
+"user_id": "u12287",
+"minute": 165,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0146",
+"text": "billed twice, please refund third time reporting",
+"user_id": "u10851",
+"minute": 165,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0122",
+"text": "our company card got charged twice for all seats since yesterday",
+"user_id": "u10094",
+"minute": 166,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0020",
+"text": "login nahi ho raha, invalid email bol raha hai this is urgent",
+"user_id": "u11340",
+"minute": 168,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0097",
+"text": "do baar paise kat gaye subscription ke third time reporting",
+"user_id": "u12043",
+"minute": 170,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0164",
+"text": "profile name is garbled asap",
+"user_id": "u10494",
+"minute": 170,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0024",
+"text": "email not valid when I sign in, but I've used this account for years please help",
+"user_id": "u10662",
+"minute": 172,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0135",
+"text": "I was charged twice this month on the app",
+"user_id": "u11458",
+"minute": 174,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0152",
+"text": "do baar paise kat gaye subscription ke on the app",
+"user_id": "u11904",
+"minute": 175,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0149",
+"text": "do baar paise kat gaye subscription ke since yesterday",
+"user_id": "u12268",
+"minute": 176,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0125",
+"text": "billed twice, please refund third time reporting",
+"user_id": "u11365",
+"minute": 177,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0144",
+"text": "two payments taken for the same plan on the app",
+"user_id": "u10206",
+"minute": 178,
+"_bug": "charge",
+"client": "Kestrel Fitness"
+},
+{
+"id": "t0099",
+"text": "our company card got charged twice for all seats asap",
+"user_id": "u11155",
+"minute": 179,
+"_bug": "charge",
+"client": "Kestrel Fitness"
+},
+{
+"id": "t0137",
+"text": "do baar paise kat gaye subscription ke this is urgent",
+"user_id": "u12721",
+"minute": 179,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0003",
+"text": "password reset says email is invalid on the app",
+"user_id": "u13904",
+"minute": 181,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0133",
+"text": "double charge on my card for the subscription please help",
+"user_id": "u13751",
+"minute": 181,
+"_bug": "charge",
+"client": "Kestrel Fitness"
+},
+{
+"id": "t0171",
+"text": "accented letters in my name are broken asap",
+"user_id": "u12396",
+"minute": 182,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0183",
+"text": "name displays garbage symbols after the update this is urgent",
+"user_id": "u10516",
+"minute": 183,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0120",
+"text": "I was charged twice this month please help",
+"user_id": "u12246",
+"minute": 185,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0100",
+"text": "do baar paise kat gaye subscription ke since yesterday",
+"user_id": "u14957",
+"minute": 186,
+"_bug": "charge",
+"client": "Kestrel Fitness"
+},
+{
+"id": "t0156",
+"text": "my name shows weird characters like \u00c3\u00a9",
+"user_id": "u13743",
+"minute": 186,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0140",
+"text": "I was charged twice this month asap",
+"user_id": "u13446",
+"minute": 187,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0128",
+"text": "do baar paise kat gaye subscription ke",
+"user_id": "u11105",
+"minute": 188,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0064",
+"text": "sign in broken after your update, email rejected asap",
+"user_id": "u11542",
+"minute": 191,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0116",
+"text": "billed twice, please refund third time reporting",
+"user_id": "u11589",
+"minute": 191,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0196",
+"text": "profile name is garbled asap",
+"user_id": "u10615",
+"minute": 192,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0093",
+"text": "locked out of my account, invalid email address this is urgent",
+"user_id": "u14750",
+"minute": 193,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0011",
+"text": "can't log in, it says my email is invalid please help",
+"user_id": "u12227",
+"minute": 194,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0098",
+"text": "I was charged twice this month on the app",
+"user_id": "u13568",
+"minute": 196,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0111",
+"text": "billed twice, please refund this is urgent",
+"user_id": "u14912",
+"minute": 197,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0194",
+"text": "my name shows weird characters like \u00c3\u00a9 on the app",
+"user_id": "u11214",
+"minute": 197,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0013",
+"text": "sign in broken after your update, email rejected",
+"user_id": "u13940",
+"minute": 198,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0052",
+"text": "can't log in, it says my email is invalid please help",
+"user_id": "u10527",
+"minute": 198,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0109",
+"text": "double charge on my card for the subscription third time reporting",
+"user_id": "u11229",
+"minute": 198,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0066",
+"text": "can't log in, it says my email is invalid this is urgent",
+"user_id": "u13471",
+"minute": 200,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0213",
+"text": "my saved preferences are gone please help",
+"user_id": "u11184",
+"minute": 200,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0241",
+"text": "my saved preferences are gone asap",
+"user_id": "u14582",
+"minute": 200,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0148",
+"text": "double charge on my card for the subscription this is urgent",
+"user_id": "u11080",
+"minute": 202,
+"_bug": "charge",
+"client": "Kestrel Fitness"
+},
+{
+"id": "t0158",
+"text": "profile name is garbled this is urgent",
+"user_id": "u14034",
+"minute": 202,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0145",
+"text": "I was charged twice this month please help",
+"user_id": "u12673",
+"minute": 204,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0218",
+"text": "my saved preferences are gone on the app",
+"user_id": "u13292",
+"minute": 204,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0121",
+"text": "billed twice, please refund please help",
+"user_id": "u11241",
+"minute": 206,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0162",
+"text": "my name shows weird characters like \u00c3\u00a9 please help",
+"user_id": "u13492",
+"minute": 206,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0102",
+"text": "double charge on my card for the subscription asap",
+"user_id": "u12701",
+"minute": 207,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0154",
+"text": "double charge on my card for the subscription asap",
+"user_id": "u12931",
+"minute": 207,
+"_bug": "charge",
+"client": "Kestrel Fitness"
+},
+{
+"id": "t0222",
+"text": "all my settings reset to default",
+"user_id": "u11934",
+"minute": 207,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0108",
+"text": "our company card got charged twice for all seats since yesterday",
+"user_id": "u10690",
+"minute": 210,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0153",
+"text": "billed twice, please refund since yesterday",
+"user_id": "u10238",
+"minute": 210,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0234",
+"text": "theme preference not saved anymore",
+"user_id": "u14440",
+"minute": 210,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0228",
+"text": "settings got wiped on the app",
+"user_id": "u14744",
+"minute": 211,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0204",
+"text": "my saved preferences are gone since yesterday",
+"user_id": "u13816",
+"minute": 212,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0124",
+"text": "do baar paise kat gaye subscription ke this is urgent",
+"user_id": "u12697",
+"minute": 213,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0207",
+"text": "theme preference not saved anymore this is urgent",
+"user_id": "u10822",
+"minute": 213,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0226",
+"text": "theme preference not saved anymore on the app",
+"user_id": "u12945",
+"minute": 213,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0219",
+"text": "theme preference not saved anymore on the app",
+"user_id": "u14517",
+"minute": 214,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0221",
+"text": "my saved preferences are gone this is urgent",
+"user_id": "u12589",
+"minute": 215,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0233",
+"text": "dark mode reset to light after update",
+"user_id": "u13764",
+"minute": 215,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0094",
+"text": "I was charged twice this month on the app",
+"user_id": "u11704",
+"minute": 217,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0107",
+"text": "two payments taken for the same plan asap",
+"user_id": "u13243",
+"minute": 218,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0211",
+"text": "settings got wiped",
+"user_id": "u13528",
+"minute": 218,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0115",
+"text": "I was charged twice this month since yesterday",
+"user_id": "u14740",
+"minute": 219,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0136",
+"text": "I was charged twice this month this is urgent",
+"user_id": "u11729",
+"minute": 219,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0150",
+"text": "billed twice, please refund asap",
+"user_id": "u12265",
+"minute": 219,
+"_bug": "charge",
+"client": "Kestrel Fitness"
+},
+{
+"id": "t0106",
+"text": "I was charged twice this month on the app",
+"user_id": "u13527",
+"minute": 220,
+"_bug": "charge",
+"client": "Kestrel Fitness"
+},
+{
+"id": "t0038",
+"text": "password reset says email is invalid since yesterday",
+"user_id": "u14354",
+"minute": 221,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0206",
+"text": "theme preference not saved anymore third time reporting",
+"user_id": "u14141",
+"minute": 225,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0210",
+"text": "theme preference not saved anymore on the app",
+"user_id": "u14063",
+"minute": 225,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0112",
+"text": "two payments taken for the same plan please help",
+"user_id": "u13779",
+"minute": 226,
+"_bug": "charge",
+"client": "Kestrel Fitness"
+},
+{
+"id": "t0215",
+"text": "theme preference not saved anymore since yesterday",
+"user_id": "u13877",
+"minute": 228,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0223",
+"text": "settings got wiped this is urgent",
+"user_id": "u12190",
+"minute": 228,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0240",
+"text": "all my settings reset to default this is urgent",
+"user_id": "u11190",
+"minute": 229,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0205",
+"text": "dark mode reset to light after update please help",
+"user_id": "u13995",
+"minute": 230,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0220",
+"text": "settings got wiped this is urgent",
+"user_id": "u10574",
+"minute": 230,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0029",
+"text": "locked out of my account, invalid email address on the app",
+"user_id": "u14052",
+"minute": 231,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0224",
+"text": "all my settings reset to default asap",
+"user_id": "u13292",
+"minute": 231,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0229",
+"text": "settings got wiped asap",
+"user_id": "u11600",
+"minute": 232,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0126",
+"text": "our company card got charged twice for all seats third time reporting",
+"user_id": "u12143",
+"minute": 233,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0198",
+"text": "accented letters in my name are broken",
+"user_id": "u10935",
+"minute": 233,
+"_bug": "names",
+"client": null
+},
+{
+"id": "t0131",
+"text": "billed twice, please refund",
+"user_id": "u10149",
+"minute": 234,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0238",
+"text": "dark mode reset to light after update on the app",
+"user_id": "u13723",
+"minute": 235,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0231",
+"text": "my saved preferences are gone since yesterday",
+"user_id": "u10067",
+"minute": 236,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0225",
+"text": "my saved preferences are gone asap",
+"user_id": "u12637",
+"minute": 238,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0212",
+"text": "dark mode reset to light after update on the app",
+"user_id": "u11107",
+"minute": 239,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0203",
+"text": "my saved preferences are gone please help",
+"user_id": "u10403",
+"minute": 243,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0101",
+"text": "two payments taken for the same plan this is urgent",
+"user_id": "u10300",
+"minute": 245,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0105",
+"text": "I was charged twice this month asap",
+"user_id": "u12284",
+"minute": 245,
+"_bug": "charge",
+"client": "Kestrel Fitness"
+},
+{
+"id": "t0230",
+"text": "all my settings reset to default this is urgent",
+"user_id": "u12781",
+"minute": 245,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0296",
+"text": "getting newsletters for a closed account on the app",
+"user_id": "u13536",
+"minute": 251,
+"_bug": "deleted",
+"client": null
+},
+{
+"id": "t0209",
+"text": "dark mode reset to light after update on the app",
+"user_id": "u13998",
+"minute": 252,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0292",
+"text": "getting newsletters for a closed account since yesterday",
+"user_id": "u14090",
+"minute": 252,
+"_bug": "deleted",
+"client": null
+},
+{
+"id": "t0216",
+"text": "all my settings reset to default since yesterday",
+"user_id": "u11337",
+"minute": 254,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0291",
+"text": "I deleted my account years ago, why am I getting emails on the app",
+"user_id": "u13401",
+"minute": 258,
+"_bug": "deleted",
+"client": null
+},
+{
+"id": "t0295",
+"text": "I deleted my account years ago, why am I getting emails third time reporting",
+"user_id": "u12805",
+"minute": 258,
+"_bug": "deleted",
+"client": null
+},
+{
+"id": "t0232",
+"text": "settings got wiped asap",
+"user_id": "u12865",
+"minute": 259,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0236",
+"text": "all my settings reset to default",
+"user_id": "u11027",
+"minute": 261,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0294",
+"text": "getting newsletters for a closed account since yesterday",
+"user_id": "u13944",
+"minute": 261,
+"_bug": "deleted",
+"client": null
+},
+{
+"id": "t0279",
+"text": "getting newsletters for a closed account third time reporting",
+"user_id": "u12095",
+"minute": 262,
+"_bug": "deleted",
+"client": null
+},
+{
+"id": "t0282",
+"text": "I deleted my account years ago, why am I getting emails asap",
+"user_id": "u13388",
+"minute": 265,
+"_bug": "deleted",
+"client": null
+},
+{
+"id": "t0278",
+"text": "I deleted my account years ago, why am I getting emails asap",
+"user_id": "u13944",
+"minute": 268,
+"_bug": "deleted",
+"client": null
+},
+{
+"id": "t0277",
+"text": "please stop emailing me, my account is deleted since yesterday",
+"user_id": "u12705",
+"minute": 270,
+"_bug": "deleted",
+"client": null
+},
+{
+"id": "t0077",
+"text": "sign in broken after your update, email rejected third time reporting",
+"user_id": "u13699",
+"minute": 271,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0281",
+"text": "account was deleted but I still receive mail asap",
+"user_id": "u12619",
+"minute": 271,
+"_bug": "deleted",
+"client": null
+},
+{
+"id": "t0297",
+"text": "account was deleted but I still receive mail on the app",
+"user_id": "u12476",
+"minute": 272,
+"_bug": "deleted",
+"client": null
+},
+{
+"id": "t0288",
+"text": "getting newsletters for a closed account",
+"user_id": "u11801",
+"minute": 274,
+"_bug": "deleted",
+"client": null
+},
+{
+"id": "t0235",
+"text": "theme preference not saved anymore please help",
+"user_id": "u11165",
+"minute": 276,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0276",
+"text": "getting newsletters for a closed account this is urgent",
+"user_id": "u11950",
+"minute": 276,
+"_bug": "deleted",
+"client": null
+},
+{
+"id": "t0299",
+"text": "account was deleted but I still receive mail",
+"user_id": "u12805",
+"minute": 280,
+"_bug": "deleted",
+"client": null
+},
+{
+"id": "t0217",
+"text": "dark mode reset to light after update this is urgent",
+"user_id": "u13292",
+"minute": 281,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0293",
+"text": "account was deleted but I still receive mail third time reporting",
+"user_id": "u14566",
+"minute": 281,
+"_bug": "deleted",
+"client": null
+},
+{
+"id": "t0214",
+"text": "theme preference not saved anymore third time reporting",
+"user_id": "u10325",
+"minute": 283,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0290",
+"text": "account was deleted but I still receive mail",
+"user_id": "u14745",
+"minute": 285,
+"_bug": "deleted",
+"client": null
+},
+{
+"id": "t0286",
+"text": "getting newsletters for a closed account this is urgent",
+"user_id": "u11316",
+"minute": 289,
+"_bug": "deleted",
+"client": null
+},
+{
+"id": "t0280",
+"text": "please stop emailing me, my account is deleted third time reporting",
+"user_id": "u11315",
+"minute": 295,
+"_bug": "deleted",
+"client": null
+},
+{
+"id": "t0239",
+"text": "my saved preferences are gone third time reporting",
+"user_id": "u12066",
+"minute": 300,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0298",
+"text": "getting newsletters for a closed account asap",
+"user_id": "u10093",
+"minute": 300,
+"_bug": "deleted",
+"client": null
+},
+{
+"id": "t0275",
+"text": "I deleted my account years ago, why am I getting emails this is urgent",
+"user_id": "u14707",
+"minute": 303,
+"_bug": "deleted",
+"client": null
+},
+{
+"id": "t0283",
+"text": "please stop emailing me, my account is deleted asap",
+"user_id": "u11747",
+"minute": 307,
+"_bug": "deleted",
+"client": null
+},
+{
+"id": "t0237",
+"text": "dark mode reset to light after update since yesterday",
+"user_id": "u11165",
+"minute": 309,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0227",
+"text": "settings got wiped on the app",
+"user_id": "u14470",
+"minute": 318,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0033",
+"text": "password reset says email is invalid asap",
+"user_id": "u10137",
+"minute": 320,
+"_bug": "email",
+"client": null
+},
+{
+"id": "t0289",
+"text": "getting newsletters for a closed account",
+"user_id": "u12716",
+"minute": 329,
+"_bug": "deleted",
+"client": null
+},
+{
+"id": "t0285",
+"text": "getting newsletters for a closed account since yesterday",
+"user_id": "u10519",
+"minute": 331,
+"_bug": "deleted",
+"client": null
+},
+{
+"id": "t0284",
+"text": "please stop emailing me, my account is deleted asap",
+"user_id": "u11719",
+"minute": 332,
+"_bug": "deleted",
+"client": null
+},
+{
+"id": "t0103",
+"text": "do baar paise kat gaye subscription ke third time reporting",
+"user_id": "u14369",
+"minute": 362,
+"_bug": "charge",
+"client": "Kestrel Fitness"
+},
+{
+"id": "t0142",
+"text": "billed twice, please refund this is urgent",
+"user_id": "u13437",
+"minute": 370,
+"_bug": "charge",
+"client": null
+},
+{
+"id": "t0208",
+"text": "settings got wiped third time reporting",
+"user_id": "u11165",
+"minute": 373,
+"_bug": "prefs",
+"client": null
+},
+{
+"id": "t0287",
+"text": "please stop emailing me, my account is deleted this is urgent",
+"user_id": "u10122",
+"minute": 414,
+"_bug": "deleted",
+"client": null
+},
+{
+"id": "t0259",
+"text": "dates on my invoice are wrong by a day third time reporting",
+"user_id": "u10131",
+"minute": 2940,
+"_bug": "dates",
+"client": null
+},
+{
+"id": "t0270",
+"text": "dates on my invoice are wrong by a day",
+"user_id": "u14371",
+"minute": 2941,
+"_bug": "dates",
+"client": null
+},
+{
+"id": "t0256",
+"text": "renewal date shows yesterday third time reporting",
+"user_id": "u13447",
+"minute": 2942,
+"_bug": "dates",
+"client": null
+},
+{
+"id": "t0272",
+"text": "due date shifted by one day again asap",
+"user_id": "u12547",
+"minute": 2945,
+"_bug": "dates",
+"client": null
+},
+{
+"id": "t0246",
+"text": "due date shifted by one day again this is urgent",
+"user_id": "u12989",
+"minute": 2946,
+"_bug": "dates",
+"client": null
+},
+{
+"id": "t0274",
+"text": "renewal date shows yesterday since yesterday",
+"user_id": "u13901",
+"minute": 2946,
+"_bug": "dates",
+"client": null
+},
+{
+"id": "t0252",
+"text": "invoice due date is one day off asap",
+"user_id": "u14768",
+"minute": 2951,
+"_bug": "dates",
+"client": null
+},
+{
+"id": "t0268",
+"text": "due date shifted by one day again on the app",
+"user_id": "u12613",
+"minute": 2951,
+"_bug": "dates",
+"client": null
+},
+{
+"id": "t0247",
+"text": "dates on my invoice are wrong by a day third time reporting",
+"user_id": "u12132",
+"minute": 2953,
+"_bug": "dates",
+"client": null
+},
+{
+"id": "t0265",
+"text": "dates on my invoice are wrong by a day third time reporting",
+"user_id": "u10268",
+"minute": 2953,
+"_bug": "dates",
+"client": null
+},
+{
+"id": "t0269",
+"text": "renewal date shows yesterday please help",
+"user_id": "u14184",
+"minute": 2953,
+"_bug": "dates",
+"client": null
+},
+{
+"id": "t0251",
+"text": "invoice due date is one day off on the app",
+"user_id": "u10323",
+"minute": 2954,
+"_bug": "dates",
+"client": null
+},
+{
+"id": "t0253",
+"text": "invoice due date is one day off since yesterday",
+"user_id": "u14117",
+"minute": 2954,
+"_bug": "dates",
+"client": null
+},
+{
+"id": "t0248",
+"text": "dates on my invoice are wrong by a day please help",
+"user_id": "u13811",
+"minute": 2955,
+"_bug": "dates",
+"client": null
+},
+{
+"id": "t0245",
+"text": "due date shifted by one day again please help",
+"user_id": "u10283",
+"minute": 2958,
+"_bug": "dates",
+"client": null
+},
+{
+"id": "t0258",
+"text": "due date shifted by one day again since yesterday",
+"user_id": "u11409",
+"minute": 2958,
+"_bug": "dates",
+"client": null
+},
+{
+"id": "t0249",
+"text": "renewal date shows yesterday this is urgent",
+"user_id": "u12477",
+"minute": 2966,
+"_bug": "dates",
+"client": null
+},
+{
+"id": "t0244",
+"text": "renewal date shows yesterday please help",
+"user_id": "u12352",
+"minute": 2969,
+"_bug": "dates",
+"client": null
+},
+{
+"id": "t0254",
+"text": "invoice due date is one day off this is urgent",
+"user_id": "u14427",
+"minute": 2973,
+"_bug": "dates",
+"client": null
+},
+{
+"id": "t0263",
+"text": "dates on my invoice are wrong by a day this is urgent",
+"user_id": "u14573",
+"minute": 2976,
+"_bug": "dates",
+"client": null
+},
+{
+"id": "t0273",
+"text": "due date shifted by one day again please help",
+"user_id": "u12108",
+"minute": 2976,
+"_bug": "dates",
+"client": null
+},
+{
+"id": "t0266",
+"text": "dates on my invoice are wrong by a day on the app",
+"user_id": "u12834",
+"minute": 2977,
+"_bug": "dates",
+"client": null
+},
+{
+"id": "t0261",
+"text": "dates on my invoice are wrong by a day since yesterday",
+"user_id": "u14580",
+"minute": 2981,
+"_bug": "dates",
+"client": null
+},
+{
+"id": "t0257",
+"text": "invoice due date is one day off",
+"user_id": "u14888",
+"minute": 2989,
+"_bug": "dates",
+"client": null
+},
+{
+"id": "t0271",
+"text": "dates on my invoice are wrong by a day please help",
+"user_id": "u12834",
+"minute": 2989,
+"_bug": "dates",
+"client": null
+},
+{
+"id": "t0264",
+"text": "renewal date shows yesterday",
+"user_id": "u11816",
+"minute": 2996,
+"_bug": "dates",
+"client": null
+},
+{
+"id": "t0262",
+"text": "renewal date shows yesterday since yesterday",
+"user_id": "u10748",
+"minute": 3007,
+"_bug": "dates",
+"client": null
+},
+{
+"id": "t0250",
+"text": "renewal date shows yesterday asap",
+"user_id": "u10442",
+"minute": 3014,
+"_bug": "dates",
+"client": null
+},
+{
+"id": "t0255",
+"text": "dates on my invoice are wrong by a day",
+"user_id": "u12177",
+"minute": 3018,
+"_bug": "dates",
+"client": null
+},
+{
+"id": "t0243",
+"text": "dates on my invoice are wrong by a day this is urgent",
+"user_id": "u12967",
+"minute": 3026,
+"_bug": "dates",
+"client": null
+},
+{
+"id": "t0267",
+"text": "invoice due date is one day off asap",
+"user_id": "u14190",
+"minute": 3037,
+"_bug": "dates",
+"client": null
+},
+{
+"id": "t0260",
+"text": "renewal date shows yesterday third time reporting",
+"user_id": "u12916",
+"minute": 3041,
+"_bug": "dates",
+"client": null
+},
+{
+"id": "t0242",
+"text": "due date shifted by one day again asap",
+"user_id": "u12142",
+"minute": 3044,
+"_bug": "dates",
+"client": null
+}
+]

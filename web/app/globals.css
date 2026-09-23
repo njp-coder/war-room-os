@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+/* One theme: dark, matching the War Room OS design file. One accent: amber. */
+:root {
+  --bg: #0d0e10;
+  --panel: #131417;
+  --raised: #17181b;
+  --line: #24262b;
+  --line-strong: #2e3036;
+  --text: #ecebe7;
+  --text-2: #c9c8c3;
+  --muted: #9b9a95;
+  --faint: #6f6e6a;
+  --accent: #f2a53c;
+  --accent-ink: #1a1305;
+  --accent-soft: #2b2410;
+  --ok: #6cc08f;
+  --ok-soft: #16281e;
+  --bad: #ef7a6a;
+  --bad-soft: #2d1714;
+  /* Colour carries one meaning each: amber = you need to act, violet = an agent is working, blue = context and data,
+     green = healthy or done, red = broken. Anything else stays neutral. */
+  --agent: #b3a1f0;
+  --agent-soft: #1d1a2b;
+  --info: #84b4e6;
+  --info-soft: #121e2a;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-panel: var(--panel);
+  --color-raised: var(--raised);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-text: var(--text);
+  --color-text-2: var(--text-2);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-ok: var(--ok);
+  --color-ok-soft: var(--ok-soft);
+  --color-bad: var(--bad);
+  --color-bad-soft: var(--bad-soft);
+  --color-agent: var(--agent);
+  --color-agent-soft: var(--agent-soft);
+  --color-info: var(--info);
+  --color-info-soft: var(--info-soft);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html, body { background: var(--bg); color: var(--text); }
+body { font-family: var(--font-geist-sans), system-ui, sans-serif; }
+::selection { background: var(--accent); color: var(--accent-ink); }
+button { cursor: pointer; }
+button:active:not(:disabled) { transform: scale(0.98); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .enter { animation: enter 220ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+}
+@keyframes enter { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+/* A node lights up the moment an agent confirms it. */
+@keyframes lit { 0% { box-shadow: 0 0 0 0 rgba(236,235,231,0.55); } 100% { box-shadow: 0 0 0 10px rgba(236,235,231,0); } }
+.lit { animation: lit 900ms ease-out 1; }
+@keyframes arrive { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+.arrive { animation: arrive 380ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+@media (prefers-reduced-motion: reduce) { .lit, .arrive, .enter { animation: none; } }
+@keyframes trace { from { stroke-dashoffset: 400; } to { stroke-dashoffset: 0; } }
+.trace { stroke-dasharray: 400; animation: trace 700ms ease-out both; }
+@media (prefers-reduced-motion: reduce) { .trace { animation: none; stroke-dasharray: none; } }

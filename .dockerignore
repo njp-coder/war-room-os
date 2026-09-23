@@ -1,0 +1,12 @@
+web/
+pyenv/
+docs/
+.env
+.git/
+**/__pycache__/
+backend/demo/data/warroom.db
+backend/demo/data/events.db
+backend/demo/data/llm_cache.db
+backend/demo/data/secret.key
+backend/demo/data/repos/
+backend/demo/data/uploads/

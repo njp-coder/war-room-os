@@ -1,0 +1,659 @@
+{
+ "company": "Lumen (fictional)",
+ "migration": "Legacy monolith to Lumen v2",
+ "batches": [
+  {
+   "id": "batch-1",
+   "rule": "modern accounts, signup >= 2022",
+   "start": 0,
+   "end": 55
+  },
+  {
+   "id": "batch-2",
+   "rule": "modern accounts, signup 2019-2021",
+   "start": 60,
+   "end": 95
+  },
+  {
+   "id": "batch-3",
+   "rule": "legacy accounts, signup < 2019",
+   "start": 100,
+   "end": 135
+  },
+  {
+   "id": "batch-4",
+   "rule": "billing-heavy accounts (annual plans)",
+   "start": 140,
+   "end": 190
+  },
+  {
+   "id": "batch-5",
+   "rule": "accounts with custom preferences",
+   "start": 195,
+   "end": 230
+  },
+  {
+   "id": "batch-6",
+   "rule": "remaining accounts incl. soft-deleted",
+   "start": 235,
+   "end": 280
+  }
+ ],
+ "people": [
+  {
+   "id": "arjun",
+   "name": "Arjun Menon",
+   "role": "CTO",
+   "level": "exec",
+   "reports_to": null,
+   "owns": [],
+   "client_facing": true,
+   "can_approve": [
+    "rollback",
+    "prod_check",
+    "client_update"
+   ],
+   "shift": "on",
+   "hours_today": 7,
+   "hours_week": 41
+  },
+  {
+   "id": "you",
+   "name": "You",
+   "role": "War room lead",
+   "level": "senior",
+   "reports_to": "arjun",
+   "owns": [
+    "migrate"
+   ],
+   "client_facing": true,
+   "can_approve": [
+    "prod_check",
+    "rollback"
+   ],
+   "shift": "on",
+   "hours_today": 9,
+   "hours_week": 48
+  },
+  {
+   "id": "meera",
+   "name": "Meera Iyer",
+   "role": "Senior engineer, auth",
+   "level": "senior",
+   "reports_to": "arjun",
+   "owns": [
+    "auth",
+    "migrate/users"
+   ],
+   "client_facing": false,
+   "can_approve": [
+    "prod_check"
+   ],
+   "shift": "on",
+   "hours_today": 9,
+   "hours_week": 44
+  },
+  {
+   "id": "rohan",
+   "name": "Rohan Das",
+   "role": "Senior engineer, billing",
+   "level": "senior",
+   "reports_to": "arjun",
+   "owns": [
+    "billing"
+   ],
+   "client_facing": false,
+   "can_approve": [
+    "prod_check"
+   ],
+   "shift": "off",
+   "hours_today": 14,
+   "hours_week": 52
+  },
+  {
+   "id": "anjali",
+   "name": "Anjali Verma",
+   "role": "Account lead",
+   "level": "senior",
+   "reports_to": "arjun",
+   "owns": [],
+   "client_facing": true,
+   "can_approve": [
+    "client_update"
+   ],
+   "shift": "on",
+   "hours_today": 6,
+   "hours_week": 30
+  },
+  {
+   "id": "farhan",
+   "name": "Farhan Qureshi",
+   "role": "Data engineer, migration mappers",
+   "level": "mid",
+   "reports_to": "you",
+   "owns": [
+    "migrate/users",
+    "migrate/billing"
+   ],
+   "client_facing": false,
+   "can_approve": [],
+   "shift": "on",
+   "hours_today": 8,
+   "hours_week": 39
+  },
+  {
+   "id": "sameer",
+   "name": "Sameer Kulkarni",
+   "role": "Engineer, payments",
+   "level": "mid",
+   "reports_to": "rohan",
+   "owns": [
+    "billing"
+   ],
+   "client_facing": false,
+   "can_approve": [],
+   "shift": "on",
+   "hours_today": 5,
+   "hours_week": 33
+  },
+  {
+   "id": "kavya",
+   "name": "Kavya Rao",
+   "role": "Support lead",
+   "level": "mid",
+   "reports_to": "anjali",
+   "owns": [
+    "support"
+   ],
+   "client_facing": true,
+   "can_approve": [],
+   "shift": "on",
+   "hours_today": 6,
+   "hours_week": 35
+  },
+  {
+   "id": "divya",
+   "name": "Divya Nair",
+   "role": "Engineer, settings and UI",
+   "level": "mid",
+   "reports_to": "you",
+   "owns": [
+    "prefs"
+   ],
+   "client_facing": false,
+   "can_approve": [],
+   "shift": "on",
+   "hours_today": 4,
+   "hours_week": 29
+  },
+  {
+   "id": "tanvi",
+   "name": "Tanvi Shah",
+   "role": "Engineer, notifications",
+   "level": "junior",
+   "reports_to": "you",
+   "owns": [
+    "notifications"
+   ],
+   "client_facing": false,
+   "can_approve": [],
+   "shift": "on",
+   "hours_today": 7,
+   "hours_week": 36
+  },
+  {
+   "id": "vikram",
+   "name": "Vikram Bose",
+   "role": "SRE",
+   "level": "senior",
+   "reports_to": "arjun",
+   "owns": [
+    "infra"
+   ],
+   "client_facing": false,
+   "can_approve": [
+    "prod_check",
+    "rollback"
+   ],
+   "shift": "on",
+   "hours_today": 10,
+   "hours_week": 47
+  },
+  {
+   "id": "nisha",
+   "name": "Nisha Pillai",
+   "role": "Support engineer",
+   "level": "junior",
+   "reports_to": "kavya",
+   "owns": [
+    "support"
+   ],
+   "client_facing": false,
+   "can_approve": [],
+   "shift": "off",
+   "hours_today": 0,
+   "hours_week": 22
+  }
+ ],
+ "history": [
+  {
+   "person": "meera",
+   "area": "auth",
+   "text": "Fixed login failures after SSO provider change"
+  },
+  {
+   "person": "meera",
+   "area": "migrate/users",
+   "text": "Reviewed email mapper for v2 validation rules"
+  },
+  {
+   "person": "farhan",
+   "area": "migrate/users",
+   "text": "Wrote user field mappers for legacy to v2"
+  },
+  {
+   "person": "farhan",
+   "area": "migrate/users",
+   "text": "Fixed charset conversion for bulk imports"
+  },
+  {
+   "person": "rohan",
+   "area": "billing",
+   "text": "Built billing cycle anchor calculation"
+  },
+  {
+   "person": "rohan",
+   "area": "billing",
+   "text": "Fixed proration bug on annual plans"
+  },
+  {
+   "person": "sameer",
+   "area": "billing",
+   "text": "Handled duplicate charge refunds for three clients"
+  },
+  {
+   "person": "sameer",
+   "area": "billing",
+   "text": "Reviewed timezone handling in invoice scheduler"
+  },
+  {
+   "person": "divya",
+   "area": "prefs",
+   "text": "Added theme and notification preferences to settings"
+  },
+  {
+   "person": "tanvi",
+   "area": "notifications",
+   "text": "Built suppression list for marketing email"
+  },
+  {
+   "person": "tanvi",
+   "area": "notifications",
+   "text": "Fixed unsubscribe not respected for old accounts"
+  },
+  {
+   "person": "vikram",
+   "area": "infra",
+   "text": "Ran cutover runbook and rollback drills"
+  },
+  {
+   "person": "kavya",
+   "area": "support",
+   "text": "Triaged launch-week tickets and wrote macros"
+  },
+  {
+   "person": "anjali",
+   "area": "client",
+   "text": "Owns Kestrel Fitness and Harbourline accounts"
+  }
+ ],
+ "codeowners": "# fictional demo repo\n/migrate/users/      @farhan @meera\n/migrate/billing/    @farhan @rohan\n/billing/            @rohan @sameer\n/auth/               @meera\n/prefs/              @divya\n/notifications/      @tanvi\n/infra/              @vikram\n",
+ "commits": [
+  {
+   "id": "9b1e",
+   "pr": 38,
+   "minute": -900,
+   "author": "farhan",
+   "reviewer": "meera",
+   "title": "Add v2 user schema mappers",
+   "files": [
+    "migrate/users/user_mapper.py"
+   ],
+   "fields": [
+    "users.id",
+    "users.created_at"
+   ],
+   "review": "Looks good."
+  },
+  {
+   "id": "c9e1",
+   "pr": 39,
+   "minute": -840,
+   "author": "farhan",
+   "reviewer": "meera",
+   "title": "Bulk import legacy display names",
+   "files": [
+    "migrate/users/name_mapper.py"
+   ],
+   "fields": [
+    "users.display_name"
+   ],
+   "review": "Are we sure legacy names are utf8? Some pre-2019 rows were latin1."
+  },
+  {
+   "id": "a1f3",
+   "pr": 41,
+   "minute": -720,
+   "author": "farhan",
+   "reviewer": "meera",
+   "title": "EmailMapper: default missing email to empty string",
+   "files": [
+    "migrate/users/email_mapper.py"
+   ],
+   "fields": [
+    "users.email"
+   ],
+   "review": "v2 validates email format. Won't an empty string fail validation? Merging to unblock batch 3, will revisit."
+  },
+  {
+   "id": "e2b6",
+   "pr": 42,
+   "minute": -700,
+   "author": "farhan",
+   "reviewer": "you",
+   "title": "Migrate all user rows including soft-deleted",
+   "files": [
+    "migrate/users/user_mapper.py"
+   ],
+   "fields": [
+    "users.deleted_at"
+   ],
+   "review": "Do we need soft-deleted users in v2? Keeping them for audit."
+  },
+  {
+   "id": "b7c2",
+   "pr": 44,
+   "minute": -600,
+   "author": "rohan",
+   "reviewer": "sameer",
+   "title": "Recalculate billing anchors during migration",
+   "files": [
+    "migrate/billing/anchor.py",
+    "billing/cycle.py"
+   ],
+   "fields": [
+    "subscriptions.billing_anchor"
+   ],
+   "review": "Anchor now computed in UTC. Should we use the account timezone?"
+  },
+  {
+   "id": "d4a8",
+   "pr": 46,
+   "minute": -560,
+   "author": "divya",
+   "reviewer": "you",
+   "title": "Map legacy theme enum to v2 values",
+   "files": [
+    "prefs/theme_map.py"
+   ],
+   "fields": [
+    "preferences.theme"
+   ],
+   "review": "LIGHT and DARK mapped. Anything else falls back to default."
+  },
+  {
+   "id": "f001",
+   "pr": 47,
+   "minute": -30,
+   "author": "vikram",
+   "reviewer": "you",
+   "title": "Cutover runbook and feature flags",
+   "files": [
+    "infra/cutover.md"
+   ],
+   "fields": [],
+   "review": "Ship it."
+  },
+  {
+   "id": "aa49",
+   "pr": 49,
+   "minute": 1500,
+   "author": "sameer",
+   "reviewer": "rohan",
+   "title": "Fix invoice due date timezone (hotfix day 2)",
+   "files": [
+    "billing/invoice_dates.py"
+   ],
+   "fields": [
+    "invoices.due_date"
+   ],
+   "review": "Good catch."
+  },
+  {
+   "id": "f5d0",
+   "pr": 52,
+   "minute": 2820,
+   "author": "farhan",
+   "reviewer": "sameer",
+   "title": "Refactor date helpers for invoice export",
+   "files": [
+    "billing/invoice_dates.py",
+    "billing/export.py"
+   ],
+   "fields": [
+    "invoices.due_date"
+   ],
+   "review": "Refactor only, no behaviour change expected."
+  }
+ ],
+ "deploys": [
+  {
+   "id": "d-101",
+   "minute": -20,
+   "title": "Go-live build with all mappers"
+  },
+  {
+   "id": "d-118",
+   "minute": 145,
+   "title": "Billing anchor recalculation enabled for batch 4"
+  },
+  {
+   "id": "d-131",
+   "minute": 1510,
+   "title": "Hotfix: invoice due date timezone"
+  },
+  {
+   "id": "d-140",
+   "minute": 2830,
+   "title": "Date helper refactor released"
+  }
+ ],
+ "code": {
+  "migrate/users/email_mapper.py": [
+   "def map_email(legacy):",
+   "    # v2 requires a syntactically valid email",
+   "    email = legacy.email or \"\"  # NULL becomes empty string",
+   "    return V2User(email=email, verified=legacy.verified)"
+  ],
+  "migrate/users/name_mapper.py": [
+   "def map_name(legacy):",
+   "    raw = legacy.display_name.encode('latin1')",
+   "    return raw.decode('utf8', errors='replace')  # double-encodes pre-2019 rows"
+  ],
+  "migrate/users/user_mapper.py": [
+   "def map_user(legacy):",
+   "    # migrates every row, deleted_at is not checked",
+   "    return V2User(id=legacy.id, status='active')"
+  ],
+  "migrate/billing/anchor.py": [
+   "def billing_anchor(sub):",
+   "    return sub.renewed_at.astimezone(UTC).date()  # ignores account timezone"
+  ],
+  "prefs/theme_map.py": [
+   "THEME = {'LIGHT': 'light', 'DARK': 'dark'}",
+   "def map_theme(value):",
+   "    return THEME.get(value, 'default')  # LEGACY_DARK falls through"
+  ],
+  "billing/invoice_dates.py": [
+   "def due_date(invoice):",
+   "    return invoice.issued_at.date() + NET_TERMS  # tz conversion removed in refactor"
+  ]
+ },
+ "mapping": [
+  {
+   "field": "users.email",
+   "legacy": "varchar(255) NULL",
+   "v2": "email NOT NULL",
+   "nullable_legacy": true,
+   "required_v2": true,
+   "note": "legacy allowed NULL for phone-only signups"
+  },
+  {
+   "field": "users.display_name",
+   "legacy": "varchar(120) latin1",
+   "v2": "text utf8",
+   "nullable_legacy": false,
+   "required_v2": true,
+   "note": "charset change"
+  },
+  {
+   "field": "users.deleted_at",
+   "legacy": "datetime NULL",
+   "v2": "(not migrated)",
+   "nullable_legacy": true,
+   "required_v2": false,
+   "note": "v2 has no soft-delete column"
+  },
+  {
+   "field": "subscriptions.billing_anchor",
+   "legacy": "date (account tz)",
+   "v2": "date (UTC)",
+   "nullable_legacy": false,
+   "required_v2": true,
+   "note": "timezone change"
+  },
+  {
+   "field": "preferences.theme",
+   "legacy": "enum(LIGHT,DARK,LEGACY_DARK)",
+   "v2": "enum(light,dark,default)",
+   "nullable_legacy": false,
+   "required_v2": true,
+   "note": "enum narrowed"
+  },
+  {
+   "field": "invoices.due_date",
+   "legacy": "date (account tz)",
+   "v2": "date",
+   "nullable_legacy": false,
+   "required_v2": true,
+   "note": "timezone sensitive"
+  },
+  {
+   "field": "users.created_at",
+   "legacy": "datetime",
+   "v2": "timestamptz",
+   "nullable_legacy": false,
+   "required_v2": true,
+   "note": "timezone change"
+  }
+ ],
+ "incidents": [
+  {
+   "id": "inc-2024-07",
+   "title": "Duplicate charges after billing provider switch",
+   "text": "Anchor dates recalculated in UTC shifted renewals for non-UTC accounts, causing a second charge. Fix: compute in account timezone, refund duplicates."
+  },
+  {
+   "id": "inc-2025-02",
+   "title": "Login outage after SSO change",
+   "text": "Session cache not rebuilt after cutover. Fix: flush sessions."
+  },
+  {
+   "id": "inc-2025-09",
+   "title": "Garbled names in CSV export",
+   "text": "latin1 data decoded as utf8 twice. Fix: detect encoding per row."
+  }
+ ],
+ "logs": [
+  {
+   "id": "tpl-0042",
+   "template": "ValidationError: email '' is not a valid address in EmailMapper.map_email user_id=<*>",
+   "count": 1284,
+   "first": 102,
+   "service": "auth",
+   "fields": [
+    "users.email"
+   ]
+  },
+  {
+   "id": "tpl-0051",
+   "template": "Charge created for subscription <*> anchor=<*> (second charge in cycle)",
+   "count": 612,
+   "first": 150,
+   "service": "billing",
+   "fields": [
+    "subscriptions.billing_anchor"
+   ]
+  },
+  {
+   "id": "tpl-0063",
+   "template": "UnicodeWarning: replacement char in display_name for user_id=<*>",
+   "count": 734,
+   "first": 105,
+   "service": "migrate/users",
+   "fields": [
+    "users.display_name"
+   ]
+  },
+  {
+   "id": "tpl-0077",
+   "template": "Unknown theme value LEGACY_DARK, using default for user_id=<*>",
+   "count": 402,
+   "first": 198,
+   "service": "prefs",
+   "fields": [
+    "preferences.theme"
+   ]
+  },
+  {
+   "id": "tpl-0088",
+   "template": "Email sent to user_id=<*> status=active (legacy deleted_at set)",
+   "count": 219,
+   "first": 240,
+   "service": "notifications",
+   "fields": [
+    "users.deleted_at"
+   ]
+  },
+  {
+   "id": "tpl-0091",
+   "template": "Invoice due_date computed without tz for user_id=<*>",
+   "count": 310,
+   "first": 2835,
+   "service": "billing",
+   "fields": [
+    "invoices.due_date"
+   ]
+  },
+  {
+   "id": "tpl-0012",
+   "template": "GET /api/session 200 in <*>ms",
+   "count": 912345,
+   "first": 0,
+   "service": "auth",
+   "fields": []
+  }
+ ],
+ "clients": [
+  {
+   "name": "Kestrel Fitness",
+   "owner": "anjali",
+   "seats": 240
+  },
+  {
+   "name": "Harbourline",
+   "owner": "anjali",
+   "seats": 90
+  }
+ ]
+}

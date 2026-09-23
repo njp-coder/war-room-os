@@ -1,0 +1,18 @@
+pyenv/
+.env
+__pycache__/
+backend/demo/data/events.db
+backend/demo/data/llm_cache.db
+web/node_modules/
+web/.next/
+
+# Secrets and live data: never publish these.
+.env.*
+!.env.example
+*.pem
+backend/demo/data/secret.key
+backend/demo/data/warroom.db
+backend/demo/data/repos/
+backend/demo/data/uploads/
+war-room-values.txt
+.railway/
